@@ -77,5 +77,3 @@ var x = setInterval(() => {
         document.querySelector("body > div.loader-base").style.display = "none";
     }
 }, 1000);
-
-
