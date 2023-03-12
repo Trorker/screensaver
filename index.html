@@ -3,6 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CountDown</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,12 +68,61 @@
             color: white;
 
             max-width: 50%;
-            margin: 200px auto;
+            margin: 150px auto;
+        }
+    </style>
+    <style>
+        .loader-base {
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            background: white;
+        }
+
+        .loader {
+            border: 16px solid #adadad;
+            border-radius: 50%;
+            border-top: 16px solid #18db66;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+
+            margin: 0 auto;
+            margin-top: calc(100vh/2 - 120px);
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 
-<body class="bg noselect">
+<body class="bg noselect" onload="loaded()">
+
+    <div class="loader-base">
+        <div class="loader"></div>
+    </div>
 
     <div class="blur">
         <div style="font-size: 0.5em; text-align: right;">
@@ -110,12 +160,21 @@
                         console.log(result);
                         document.getElementById("quote").textContent = result.quote;
                         document.getElementById("author").textContent = "-" + result.author;
+
+                        loadQuotes = true;
                     });
             </script>
         </div>
     </div>
 
     <script>
+
+        let loadImg = false;
+        let loadQuotes = false;
+        loaded = () => {
+            loadImg = true;
+        }
+
         function toggleFullScreen() {
             if (!document.fullscreenElement &&    // alternative standard method
                 !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
@@ -171,6 +230,10 @@
             if (distance < 0) {
                 clearInterval(x);
                 //document.getElementById("demo").textContent = "EXPIRED";
+            }
+
+            if (loadImg && loadQuotes) {
+                document.querySelector("body > div.loader-base").style.display = "none";
             }
         }, 1000);
     </script>
