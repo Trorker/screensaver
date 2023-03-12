@@ -66,7 +66,7 @@
             padding: 10px;
             color: white;
 
-            max-width: 40%;
+            max-width: 50%;
             margin: 200px auto;
         }
     </style>
@@ -75,6 +75,9 @@
 <body class="bg noselect">
 
     <div class="blur">
+        <div style="font-size: 0.5em; text-align: right;">
+            <span style="cursor: pointer;" onclick="toggleFullScreen()">&#x26F6;</span>
+        </div>
         <div class="timer" style="display: flex; justify-content: space-around;">
             <div style="text-align: center;">
                 <h1 id="days">00</h1>
@@ -112,7 +115,28 @@
         </div>
     </div>
 
-
+    <script>
+        function toggleFullScreen() {
+            if (!document.fullscreenElement &&    // alternative standard method
+                !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (document.cancelFullScreen) {
+                    document.cancelFullScreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                }
+            }
+        }
+    </script>
     <script>
         // Set the date we're counting down to
         var countDownDate = new Date("2023/08/08 08:00:00").getTime();
