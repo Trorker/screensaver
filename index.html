@@ -126,6 +126,7 @@
 
     <div class="blur">
         <div style="font-size: 0.5em; text-align: right;">
+            <span style="cursor: pointer;" onclick="loadQuote()">&#8635;</span>
             <span style="cursor: pointer;" onclick="toggleFullScreen()">&#x26F6;</span>
         </div>
         <div class="timer" style="display: flex; justify-content: space-around;">
@@ -154,7 +155,8 @@
                 <i class="corsive" id="author"></i>
             </div>
             <script>
-                fetch('https://dummyjson.com/quotes/random')
+                loadQuote = () => {
+                    fetch('https://dummyjson.com/quotes/random')
                     .then(res => res.json())
                     .then(result => {
                         console.log(result);
@@ -163,6 +165,8 @@
 
                         loadQuotes = true;
                     });
+                }
+                loadQuote();
             </script>
         </div>
     </div>
