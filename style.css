@@ -25,7 +25,7 @@ body {
 
 
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .timer {
@@ -61,7 +61,7 @@ h1 {
 
 
 .bg {
-    background: url(https://picsum.photos/1920/1080?random&blur=1) no-repeat center fixed;
+    background: url(https://picsum.photos/1920/1080?random&blur=1) no-repeat center fixed; /*https://source.unsplash.com/1600x900/?nature*/
     background-size: cover;
 
     /*height: 100vh;*/
