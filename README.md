@@ -20,3 +20,6 @@ https://github.com/ywalia01/dune-api
 https://github.com/lukePeavey/quotable  
 https://dummyjson.com/docs/quotes  
 https://github.com/ssokurenko/quotes-react-app  
+https://stackoverflow.com/questions/70902921/finding-api-to-get-random-quotes-and-images-from-website  
+https://winterly.app/  
+https://codepen.io/ahmady09/pen/PNejyN?editors=0010  
