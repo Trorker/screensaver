@@ -61,7 +61,9 @@ h1 {
 
 
 .bg {
-    background: url(https://picsum.photos/1920/1080?random&blur=1) no-repeat center fixed; /*https://source.unsplash.com/1600x900/?nature*/
+    background: url(https://source.unsplash.com/1920x1080/?motivational-background) no-repeat center fixed;
+    /*https://source.unsplash.com/1920x1080/?nature*/
+    /*https://picsum.photos/1920/1080?random&blur=1*/
     background-size: cover;
 
     /*height: 100vh;*/
