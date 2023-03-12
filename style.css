@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap');
+
+body {
+    font-size: 36px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.corsive {
+    font-family: 'Caveat', cursive;
+    font-size: 0.5em;
+
+
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.timer {
+    font-family: 'Indie Flower', cursive;
+}
+
+h1 {
+    margin: 0;
+}
+
+.loader-base {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: white;
+}
+
+.loader {
+    border: 16px solid #adadad;
+    border-radius: 50%;
+    border-top: 16px solid #18db66;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+
+    margin: 0 auto;
+    margin-top: calc(100vh/2 - 120px);
+}
+
+
+.bg {
+    background: url(https://picsum.photos/1920/1080?random&blur=1) no-repeat center fixed;
+    background-size: cover;
+
+    /*height: 100vh;*/
+}
+
+.blur {
+    background-color: rgb(0 0 0 / 75%);
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+
+    max-width: 50%;
+    margin: 150px auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
