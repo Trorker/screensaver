@@ -4,7 +4,8 @@ Da Fare:
 --
 - Quando imposti il timer (data scadenza), impostare anche la data di inizio, cosi da aggiungere un loadBar.    
 - Aggiungere Orologgio  
-- Agiornamento sfondo e quote ogni ora
+- Agiornamento sfondo e quote ogni ora  
+- index per la grandezza testo e altro ```index = (vw/vh)```
 
 
 
