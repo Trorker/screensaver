@@ -13,7 +13,10 @@ Da Fare:
 - Css animatin writing text [link exsample](https://css-tricks.com/snippets/css/typewriter-effect/) or [this](https://freefrontend.com/css-typing-text/)  
 - aggiungere meteo   
 - in base al meteo far vedere Imagine di BG
-- aggiungere audio di sottofondo, che fa in base al meteo 
+- aggiungere audio di sottofondo, che fa in base al meteo   
+- scrivere cosa significa la.data e cosa si vuole fare entro quella data  
+- ogni tanto mandare alert come promemoria di quello che si vuole fare
+- to-do list????
 
 
 
