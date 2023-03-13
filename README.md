@@ -16,7 +16,8 @@ Da Fare:
 - aggiungere audio di sottofondo, che fa in base al meteo   
 - scrivere cosa significa la.data e cosa si vuole fare entro quella data  
 - ogni tanto mandare alert come promemoria di quello che si vuole fare
-- to-do list????
+- to-do list???  
+- **importante** https://www.instagram.com/reel/Co4eeXZjhuA/?igshid=YmMyMTA2M2Y=.  
 
 
 
