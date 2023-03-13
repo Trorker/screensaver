@@ -31,3 +31,12 @@ https://stackoverflow.com/questions/70902921/finding-api-to-get-random-quotes-an
 https://winterly.app/  
 https://codepen.io/ahmady09/pen/PNejyN?editors=0010  
 https://type.fit/api/quotes  
+
+
+
+Clock animation  
+https://bashooka.com/coding/40-css-javascript-animated-countdown-timer-examples/  
+https://codepen.io/putraaryotama/pen/wgwqBB   
+https://codepen.io/chriscoyier/pen/DdMLPN  
+https://codepen.io/shshaw/pen/BzObXp  
+https://codepen.io/doriancami/pen/jEJvaV
