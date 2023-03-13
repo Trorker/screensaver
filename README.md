@@ -4,12 +4,14 @@ Da Fare:
 --
 - Quando imposti il timer (data scadenza), impostare anche la data di inizio, cosi da aggiungere un loadBar.    
 - Aggiungere Orologgio  
-- Agiornamento sfondo e quote ogni ora  
+- **[Add]** Agiornamento sfondo e quote ogni ora  
 - index per la grandezza testo e altro ```index = (vw/vh)```
 - proprietario della foto  
 - ?? Foto del giorno bing??
 - loadbar stile evuluzione far scegliere)
 - collegarsi al account Microsoft o Google
+- Css animatin writing text [link exsample](https://css-tricks.com/snippets/css/typewriter-effect/) or [this](https://freefrontend.com/css-typing-text/)  
+
 
 
 
