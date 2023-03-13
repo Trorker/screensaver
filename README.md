@@ -1,7 +1,11 @@
 # Screensaver
 
-Quando imposti il timer (data scadenza), impostare anche la data di inizio, cosi da aggiungere un loadBar.  
-Aggiungere Orologgio  
+Da Fare:
+--
+- Quando imposti il timer (data scadenza), impostare anche la data di inizio, cosi da aggiungere un loadBar.    
+- Aggiungere Orologgio  
+- Agiornamento sfondo e quote ogni ora
+
 
 
 
