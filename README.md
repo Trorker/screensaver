@@ -8,6 +8,7 @@ Da Fare:
 - index per la grandezza testo e altro ```index = (vw/vh)```
 - proprietario della foto  
 - ?? Foto del giorno bing??
+- loadbar stile evuluzione far scegliere)
 
 
 
