@@ -11,6 +11,9 @@ Da Fare:
 - loadbar stile evuluzione far scegliere)
 - collegarsi al account Microsoft o Google
 - Css animatin writing text [link exsample](https://css-tricks.com/snippets/css/typewriter-effect/) or [this](https://freefrontend.com/css-typing-text/)  
+- aggiungere meteo   
+- in base al meteo far vedere Imagine di BG
+- aggiungere audio di sottofondo, che fa in base al meteo 
 
 
 
