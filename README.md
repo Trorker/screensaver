@@ -9,6 +9,7 @@ Da Fare:
 - proprietario della foto  
 - ?? Foto del giorno bing??
 - loadbar stile evuluzione far scegliere)
+- collegarsi al account Microsoft o Google
 
 
 
