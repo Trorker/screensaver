@@ -1,21 +1,43 @@
+const convertBlobToBase64 = blob => new Promise((resolve, reject) => {
+    const reader = new FileReader;
+    reader.onerror = reject;
+    reader.onload = () => {
+        resolve(reader.result);
+    };
+    reader.readAsDataURL(blob);
+});
+
+let loadImg = false;
+let loadQuotes = false;
+
 loadQuote = () => {
     fetch('https://dummyjson.com/quotes/random')
         .then(res => res.json())
         .then(result => {
             console.log(result);
+
             document.getElementById("quote").textContent = result.quote;
             document.getElementById("author").textContent = "-" + result.author;
 
             loadQuotes = true;
         });
 }
-loadQuote();
+loadBg = () => {
+    //document.body.style.backgroundImage = `url(https://source.unsplash.com/1920x1080/?motivational-background&${new Date().getTime()})`;
+    fetch(`https://source.unsplash.com/1920x1080/?motivational-background&${new Date().getTime()}`)
+        .then(response => response.blob())
+        .then(async blob => {
+            console.log(blob);
+            
+            const base64 = await convertBlobToBase64(blob);
+            document.body.style.backgroundImage = `url(${base64})`;
 
-let loadImg = false;
-let loadQuotes = false;
-loaded = () => {
-    loadImg = true;
+            loadImg = true;
+        });
 }
+
+loadBg();
+loadQuote();
 
 function toggleFullScreen() {
     if (!document.fullscreenElement &&    // alternative standard method
@@ -56,6 +78,10 @@ var x = setInterval(() => {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    if (hours < "10") { hours = "0" + hours; }
+    if (minutes < "10") { minutes = "0" + minutes; }
+    if (seconds < "10") { seconds = "0" + seconds; }
+
     let result = `${days} Giorni ${hours} Ore ${minutes} Minuti ${seconds} Secondi`;
 
     // Output the result in an element with id="demo"
@@ -71,6 +97,11 @@ var x = setInterval(() => {
     if (distance < 0) {
         clearInterval(x);
         //document.getElementById("demo").textContent = "EXPIRED";
+    }
+
+    if (minutes == "00" && seconds == "00") {
+        loadQuote();
+        loadBg();
     }
 
     if (loadImg && loadQuotes) {
