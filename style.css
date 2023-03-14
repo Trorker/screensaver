@@ -102,3 +102,27 @@ h1 {
         transform: rotate(360deg);
     }
 }
+
+.progress-bar {
+    border-radius: 60px;
+    overflow: hidden;
+    width: 90%;
+
+    max-width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.progress-bar span {
+    display: block;
+}
+
+.bar {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.progress {
+    background: #75b800;
+    color: #fff;
+    padding: 5px;
+    width: 0;
+}
