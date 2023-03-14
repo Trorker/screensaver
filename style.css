@@ -121,8 +121,8 @@ h1 {
 }
 
 .progress {
-    background: #75b800;
+    background: white; /*#75b800;*/
     color: #fff;
-    padding: 5px;
+    padding: 3px;
     width: 0;
 }
