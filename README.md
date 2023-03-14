@@ -2,7 +2,7 @@
 
 Da Fare:
 --
-- Quando imposti il timer (data scadenza), impostare anche la data di inizio, cosi da aggiungere un loadBar.    
+- **[Add]** Quando imposti il timer (data scadenza), impostare anche la data di inizio, cosi da aggiungere un loadBar.    
 - Aggiungere Orologgio  
 - **[Add]** Agiornamento sfondo e quote ogni ora  
 - index per la grandezza testo e altro ```index = (vw/vh)```
