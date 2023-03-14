@@ -18,6 +18,8 @@ Da Fare:
 - ogni tanto mandare alert come promemoria di quello che si vuole fare
 - to-do list???  
 - **importante** https://www.instagram.com/reel/Co4eeXZjhuA/?igshid=YmMyMTA2M2Y=.  
+- Photo of the day Bing [link](http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US)  
+- 
 
 
 
