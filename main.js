@@ -107,4 +107,9 @@ var x = setInterval(() => {
     if (loadImg && loadQuotes) {
         document.querySelector("body > div.loader-base").style.display = "none";
     }
+
+
+    //update progress bar
+    const percent = ((new Date().getTime() - new Date("2022/08/08").getTime()) * 100) / (new Date("2023/08/08").getTime() - new Date("2022/08/08").getTime());
+    document.getElementById("progress").style.width = percent + "%";
 }, 1000);
