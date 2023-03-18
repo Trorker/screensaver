@@ -110,6 +110,8 @@ var x = setInterval(() => {
 
 
     //update progress bar
-    const percent = ((new Date().getTime() - new Date("2022/08/08").getTime()) * 100) / (new Date("2023/08/08").getTime() - new Date("2022/08/08").getTime());
+    const Ds = "2023/03/18";
+    const Df = "2023/08/08";
+    const percent = ((new Date().getTime() - new Date(Ds).getTime()) * 100) / (new Date(Df).getTime() - new Date(Ds).getTime());
     document.getElementById("progress").style.width = percent + "%";
 }, 1000);
