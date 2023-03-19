@@ -114,7 +114,7 @@ var x = setInterval(() => {
     let h = checkTime(today.getHours());
     let m = checkTime(today.getMinutes());
     let s = checkTime(today.getSeconds());
-    document.getElementById('clock').textContent =  h + ":" + m + ":" + s;
+    document.getElementById('clock').textContent = `${h}:${m}:${s}`;
 
 
     //update progress bar
