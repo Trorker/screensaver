@@ -78,9 +78,9 @@ var x = setInterval(() => {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (hours < "10") { hours = "0" + hours; }
-    if (minutes < "10") { minutes = "0" + minutes; }
-    if (seconds < "10") { seconds = "0" + seconds; }
+    (hours < "10") ? hours = "0" + hours : hours;
+    (minutes < "10") ? minutes = "0" + minutes : minutes;
+    (seconds < "10") ? seconds = "0" + seconds : seconds;
 
     let result = `${days} Giorni ${hours} Ore ${minutes} Minuti ${seconds} Secondi`;
 
@@ -113,5 +113,6 @@ var x = setInterval(() => {
     const Ds = "2023/03/18";
     const Df = "2023/08/08";
     const percent = ((new Date().getTime() - new Date(Ds).getTime()) * 100) / (new Date(Df).getTime() - new Date(Ds).getTime());
+    document.getElementById("percent").textContent = percent.toFixed(1) + "%";
     document.getElementById("progress").style.width = percent + "%";
 }, 1000);
