@@ -14,9 +14,12 @@
     </div>
 
     <div class="blur">
-        <div style="font-size: 0.5em; text-align: right;">
-            <span style="cursor: pointer;" onclick="loadQuote(); loadBg()">&#8635;</span>
-            <span style="cursor: pointer;" onclick="toggleFullScreen()">&#x26F6;</span>
+        <div style="font-size: 0.5em; display: flex; justify-content: space-between;">
+            <span class="timer" id="clock">00:00:00</span>
+            <span>
+                <span style="cursor: pointer;" onclick="loadQuote(); loadBg()">&#8635;</span>
+                <span style="cursor: pointer;" onclick="toggleFullScreen()">&#x26F6;</span>
+            </span>
         </div>
         <div class="timer" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
             <div style="text-align: center;">
