@@ -60,6 +60,8 @@ function toggleFullScreen() {
     }
 }
 
+const checkTime = (n) => { return (n < "10") ? n = "0" + n : n; }
+
 // Set the date we're counting down to
 var countDownDate = new Date("2023/08/08 08:00:00").getTime();
 
@@ -78,9 +80,9 @@ var x = setInterval(() => {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    (hours < "10") ? hours = "0" + hours : hours;
-    (minutes < "10") ? minutes = "0" + minutes : minutes;
-    (seconds < "10") ? seconds = "0" + seconds : seconds;
+    hours = checkTime(hours);
+    minutes = checkTime(minutes);
+    seconds = checkTime(seconds);
 
     let result = `${days} Giorni ${hours} Ore ${minutes} Minuti ${seconds} Secondi`;
 
@@ -107,6 +109,12 @@ var x = setInterval(() => {
     if (loadImg && loadQuotes) {
         document.querySelector("body > div.loader-base").style.display = "none";
     }
+
+    const today = new Date();
+    let h = checkTime(today.getHours());
+    let m = checkTime(today.getMinutes());
+    let s = checkTime(today.getSeconds());
+    document.getElementById('clock').textContent =  h + ":" + m + ":" + s;
 
 
     //update progress bar
