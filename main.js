@@ -28,13 +28,45 @@ loadBg = () => { //motivational-background
         .then(response => response.blob())
         .then(async blob => {
             console.log(blob);
-            
+
             const base64 = await convertBlobToBase64(blob);
             document.body.style.backgroundImage = `url(${base64})`;
 
             loadImg = true;
         });
 }
+loadQuotesIt = () => {
+    var authors = [
+        "Mahatma Gandhi",
+        "Albert Einstein",
+        "Martin Luther King, Jr.",
+        "Leonardo da Vinci",
+        "Walt Disney",
+        "Edgar Allan Poe",
+        "Sigmund Freud",
+        "Thomas A. Edison",
+        "Robin Williams",
+        "Steve Jobs"
+    ];
+
+    const randInt = (min, max) => {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    getQuote = () => Wikiquote.getRandomQuote(authors[randInt(0, 9)],
+        function (quote) {
+            console.log(quote);
+            if (quote.quote && quote.quote.length <= 180) {
+                console.log(quote.quote);
+            } else {
+                getQuote();
+            }
+
+        }, (e) => { console.log(e); });
+
+    getQuote();
+}
+//loadQuotesIt();
 
 loadBg();
 loadQuote();
