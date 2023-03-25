@@ -55,7 +55,7 @@ loadQuotesIt = () => {
 
     getQuote = () => Wikiquote.getRandomQuote(authors[randInt(0, 9)],
         function (quote) {
-            console.log(quote);
+            console.log("quote", quote);
             if (quote.quote && quote.quote.length <= 180) {
                 console.log(quote.quote);
             } else {
@@ -66,7 +66,7 @@ loadQuotesIt = () => {
 
     getQuote();
 }
-//loadQuotesIt();
+loadQuotesIt();
 
 loadBg();
 loadQuote();
