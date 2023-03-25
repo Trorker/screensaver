@@ -48,10 +48,10 @@ var Wikiquote = (function () {
         });
 
         fetch(API_URL + "?" + query, {
-            mode: 'cors'
+            mode: 'no-cors'
         })
             .then(res => {
-                console.log(res.blob());
+                console.log(res.text());
             });
 
         /*
