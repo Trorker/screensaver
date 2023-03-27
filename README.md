@@ -21,7 +21,7 @@ Da Fare:
 - Photo of the day Bing (Bing.com) [link](http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=it-IT)  
 - tasto condividi, condividi la foto con la citazione. 
 - Colore addattivo in base allo sfondo
-- API source.unsplash.com  (unsplash-source-js)[https://github.com/unsplash/unsplash-source-js]
+- API source.unsplash.com  (unsplash-source-js)[https://github.com/unsplash/unsplash-source-js] or (exsample)[https://stackoverflow.com/questions/51362999/cant-get-json-from-unsplash-api]
 
 
 
