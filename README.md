@@ -20,7 +20,7 @@ Da Fare:
 - **importante** https://www.instagram.com/reel/Co4eeXZjhuA/?igshid=YmMyMTA2M2Y=.  
 - Photo of the day Bing (Bing.com) [link](http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=it-IT)  
 - tasto condividi, condividi la foto con la citazione. 
-- 
+- Colore addattivo in base allo sfondo
 
 
 
