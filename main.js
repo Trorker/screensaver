@@ -23,7 +23,7 @@ loadQuote = () => {
         });
 }
 loadBg = () => { //motivational-background
-    const photo = "ukraine";
+    const photo = "ucraina";
     //document.body.style.backgroundImage = `url(https://source.unsplash.com/1920x1080/?motivational-background&${new Date().getTime()})`;
     fetch(`https://source.unsplash.com/1920x1080/?${photo}#${new Date().getTime()}`)
         .then(response => response.blob())
