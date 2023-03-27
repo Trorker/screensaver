@@ -24,7 +24,7 @@ loadQuote = () => {
 }
 loadBg = () => { //motivational-background
     //document.body.style.backgroundImage = `url(https://source.unsplash.com/1920x1080/?motivational-background&${new Date().getTime()})`;
-    fetch(`https://source.unsplash.com/1920x1080/?nature#${new Date().getTime()}`)
+    fetch(`https://source.unsplash.com/1920x1080/?ukraine#${new Date().getTime()}`)
         .then(response => response.blob())
         .then(async blob => {
             console.log(blob);
