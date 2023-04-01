@@ -23,7 +23,8 @@ Da Fare:
 - Colore addattivo in base allo sfondo
 - API source.unsplash.com  (unsplash-source-js)[https://github.com/unsplash/unsplash-source-js] or (exsample)[https://stackoverflow.com/questions/51362999/cant-get-json-from-unsplash-api]
 - Aggiungere orario del tramonto e dell'alba
-- cambiare foto in base alle parole chiave scelte ogni giorno (es. lun-> natura; mar-> ucraina)
+- cambiare foto in base alle parole chiave scelte ogni giorno (es. lun-> natura; mar-> ucraina).
+- Wep App che poi installare
 
 
 
