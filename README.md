@@ -25,7 +25,7 @@ Da Fare:
 - Aggiungere orario del tramonto e dell'alba
 - cambiare foto in base alle parole chiave scelte ogni giorno (es. lun-> natura; mar-> ucraina).
 - Wep App che poi installare
-
+- al posto delle foto mettere video 
 
 
 
