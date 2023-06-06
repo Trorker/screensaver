@@ -10,17 +10,61 @@ const convertBlobToBase64 = blob => new Promise((resolve, reject) => {
 let loadImg = false;
 let loadQuotes = false;
 
-loadQuote = () => {
-    fetch('https://dummyjson.com/quotes/random')
-        .then(res => res.json())
-        .then(result => {
-            console.log(result);
-
-            document.getElementById("quote").textContent = result.quote;
-            document.getElementById("author").textContent = "-" + result.author;
-
-            loadQuotes = true;
+const ChatGPT = async (message) => {
+    const apikey= process.env.API_KEY;
+    console.log(apikey);
+    const endpoint = 'https://api.openai.com/v1/chat/completions';
+    try {
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                "model": "gpt-3.5-turbo",
+                "messages": [{ "role": "user", "content": `${message}` }]
+            }),
         });
+
+        if (response.status != 200) {
+            return null
+        }
+
+        const data = await response.json();
+
+        // Gestisci la risposta dell'API
+        const reply = data.choices[0].message.content;
+        console.log('ChatGPT: ' + reply);
+
+        return reply;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
+
+loadQuote = async () => {
+    let responseGPT = await ChatGPT('Dimmi una citazione in formato json');
+    if (responseGPT != null) {
+        let quote = JSON.parse(responseGPT);
+
+        document.getElementById("quote").textContent = quote.citazione;
+        document.getElementById("author").textContent = "-" + quote.autore;
+
+        loadQuotes = true;
+    } else {
+        fetch('https://dummyjson.com/quotes/random')
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+
+                document.getElementById("quote").textContent = result.quote;
+                document.getElementById("author").textContent = "-" + result.author;
+
+                loadQuotes = true;
+            });
+    }
 }
 loadBg = () => { //motivational-background
     const photo = "nature";
