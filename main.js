@@ -10,9 +10,33 @@ const convertBlobToBase64 = blob => new Promise((resolve, reject) => {
 let loadImg = false;
 let loadQuotes = false;
 
+const setApiKey = (reset = false) => {
+    let apiKey = null;
+    if (localStorage.getItem("API_KEY") && !reset) {
+        apiKey = localStorage.getItem("API_KEY");
+    } else {
+        let promptAPI = prompt("Please enter your API_KEY");
+        if (promptAPI != null && promptAPI != "") {
+            localStorage.setItem("API_KEY", promptAPI);
+            apiKey = promptAPI;
+        }
+    }
+
+    if (apiKey == null) {
+        return null
+    }
+
+    return apiKey;
+}
+
 const ChatGPT = async (message) => {
-    const apikey= process.env.API_KEY;
-    console.log(apikey);
+    let apiKey = setApiKey();
+
+    if (apiKey == null) {
+        return null
+    }
+
+
     const endpoint = 'https://api.openai.com/v1/chat/completions';
     try {
         const response = await fetch(endpoint, {
@@ -27,7 +51,7 @@ const ChatGPT = async (message) => {
             }),
         });
 
-        if (response.status != 200) {
+        if (response.status != 200) { //401 apiKey errato
             return null
         }
 
