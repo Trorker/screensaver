@@ -18,8 +18,9 @@
         <div style="font-size: 0.5em; display: flex; justify-content: space-between;">
             <span class="timer" style="letter-spacing: 0.1em;" id="clock">00:00:00</span>
             <span>
-                <span style="cursor: pointer;" onclick="loadQuote(); loadBg()">&#8635;</span>
-                <span style="cursor: pointer;" onclick="toggleFullScreen()">&#x26F6;</span>
+                <span style="cursor: pointer;" title="set ApiKey" onclick="setApiKey(true)">&#x26BF;</span>
+                <span style="cursor: pointer;" title="Upadate BG e Quotes" onclick="loadQuote(); loadBg()">&#8635;</span>
+                <span style="cursor: pointer;" title="FullScreen" onclick="toggleFullScreen()">&#x26F6;</span>
             </span>
         </div>
         <div class="timer" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
