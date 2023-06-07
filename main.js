@@ -69,7 +69,7 @@ const ChatGPT = async (message) => {
 }
 
 loadQuote = async () => {
-    let responseGPT = await ChatGPT('Dimmi una citazione in formato json');
+    let responseGPT = await ChatGPT('Generami una citazione motivazionale in formato json');
     if (responseGPT != null) {
         let quote = JSON.parse(responseGPT);
 
