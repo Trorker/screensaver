@@ -26,12 +26,19 @@ Da Fare:
 - cambiare foto in base alle parole chiave scelte ogni giorno (es. lun-> natura; mar-> ucraina).
 - Wep App che poi installare
 - al posto delle foto mettere video 
-- **[Add]** ChatGPT (visto che forse sarà solo sul client, sarà il lciente che aggiunge il suo ApiKey nelle impostazioni)
+- **[Add]** ChatGPT (visto che forse sarà solo sul client, sarà il lciente che aggiunge il suo ApiKey nelle impostazioni)  
+  
+    
+    
 
 
 
 
 
+<blockquote style="font-family: Arial, sans-serif; font-size: 18px; color: #333; border-left: 4px solid #f1c40f; padding-left: 10px;">
+  <p style="margin-bottom: 10px;">La vita è come una bicicletta: per mantenere l'equilibrio devi continuare a muoverti.</p>
+  <footer style="font-style: italic;">- Albert Einstein</footer>
+</blockquote>
 
 
 https://codepen.io/kindofone/pen/DddNdL?editors=1100
