@@ -26,7 +26,8 @@ Da Fare:
 - cambiare foto in base alle parole chiave scelte ogni giorno (es. lun-> natura; mar-> ucraina).
 - Wep App che poi installare
 - al posto delle foto mettere video 
-- **[Add]** ChatGPT (visto che forse sarà solo sul client, sarà il lciente che aggiunge il suo ApiKey nelle impostazioni)  
+- **[Add]** ChatGPT (visto che forse sarà solo sul client, sarà il lciente che aggiunge il suo ApiKey nelle impostazioni)
+- al posto della foto aggiungere un posta da Google street view 
   
     
     
