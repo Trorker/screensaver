@@ -164,7 +164,7 @@ function toggleFullScreen() {
 const checkTime = (n) => { return (n < "10") ? n = "0" + n : n; }
 
 // Set the date we're counting down to
-var countDownDate = new Date("2023/08/08 08:00:00").getTime();
+var countDownDate = new Date("2024/08/08 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(() => {
@@ -219,8 +219,8 @@ var x = setInterval(() => {
 
 
     //update progress bar
-    const Ds = "2023/03/18";
-    const Df = "2023/08/08";
+    const Ds = "2023/08/08";
+    const Df = "2024/08/08";
     const percent = ((new Date().getTime() - new Date(Ds).getTime()) * 100) / (new Date(Df).getTime() - new Date(Ds).getTime());
     document.getElementById("percent").textContent = percent.toFixed(1) + "%";
     document.getElementById("progress").style.width = percent + "%";
