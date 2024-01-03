@@ -27,7 +27,8 @@ Da Fare:
 - Wep App che poi installare
 - al posto delle foto mettere video 
 - **[Add]** ChatGPT (visto che forse sarà solo sul client, sarà il lciente che aggiunge il suo ApiKey nelle impostazioni)
-- al posto della foto aggiungere un posta da Google street view 
+- al posto della foto aggiungere un posta da Google street view
+- Al posto della frase aggiungere una nuova parola o frase in italiano e tradotto in inglese.... un insegnate di ingele 
   
     
     
