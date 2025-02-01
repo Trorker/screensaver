@@ -48,11 +48,11 @@ var Wikiquote = (function () {
         });
 
         fetch(API_URL + "?" + query, {
-            mode: 'no-cors'
+            mode: 'no-cors',
         })
-            .then(res => {
-                console.log(res.text());
-            });
+        .then(text => {
+            console.log(text);
+        });
 
         /*
         $.ajax({
