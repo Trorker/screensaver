@@ -93,7 +93,7 @@ loadQuote = async () => {
 loadBg = () => { //motivational-background
     const photo = "nature";
     //document.body.style.backgroundImage = `url(https://source.unsplash.com/1920x1080/?motivational-background&${new Date().getTime()})`;
-    fetch(`https://source.unsplash.com/1920x1080/?${photo}#${new Date().getTime()}`)
+    fetch(`https://picsum.photos/1920/1080`) //`https://source.unsplash.com/1920x1080/?${photo}#${new Date().getTime()}`
         .then(response => response.blob())
         .then(async blob => {
             console.log(blob);
@@ -105,6 +105,30 @@ loadBg = () => { //motivational-background
         });
 }
 loadQuotesIt = () => {
+
+    let url = 'https://it.wikiquote.org/w/api.php?format=json&origin=*&action=parse&page=Template:Qotd';
+
+    let wqQuoteHtml = "";
+    let wqAuthorHtml = "";
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(data => fecthData(data))
+        .catch(error => console.log(error))
+    
+        const fecthData = (data) => {
+        let body = `${data.parse.text['*']}`;
+        console.log(body);
+        bodyHtml = body.replace(/\n*/gm, "").replace(/\/wiki\//gm, "https://it.wikiquote.org/wiki/");
+        wqQuoteHtml = bodyHtml.replace(/.+<blockquote/gm, "<blockquote").replace(/<\/blockquote.+/gm, "</blockquote");
+        wqAuthorHtml = bodyHtml.replace(/\n*/gm, "").replace(/.+<big id="Aŭtoro_CDLT"/gm, '<big id="Aŭtoro_CDLT"').replace(/<\/big><br\/>.+/gm, "</big>");
+       
+        console.log(wqQuoteHtml);
+        console.log(wqAuthorHtml);
+        //document.getElementById('eoWikiquote').innerHTML = `<figure id="figEoWikiquote">${wqQuoteHtml} + <figcaption>—${wqAuthorHtml}</figcaption></figure>`
+    }
+
+
     var authors = [
         "Mahatma Gandhi",
         "Albert Einstein",
