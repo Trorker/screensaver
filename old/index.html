@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CountDown</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="wikiquote copy.js"></script>
+</head>
+
+<body class="bg noselect">
+    <div class="loader-base">
+        <div class="loader"></div>
+    </div>
+
+    <div class="blur">
+        <div style="font-size: 0.5em; display: flex; justify-content: space-between;">
+            <span class="timer" style="letter-spacing: 0.1em;" id="clock">00:00:00</span>
+            <span>
+                <span style="cursor: pointer;" title="set ApiKey" onclick="setApiKey(true)">&#x26BF;</span>
+                <span style="cursor: pointer;" title="Upadate BG e Quotes" onclick="loadQuote(); loadBg()">&#8635;</span>
+                <span style="cursor: pointer;" title="FullScreen" onclick="toggleFullScreen()">&#x26F6;</span>
+            </span>
+        </div>
+        <div class="timer" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+            <div style="text-align: center; margin: 0 0.4em;">
+                <h1 id="days">00</h1>
+                <span>Days</span>
+            </div>
+            <div style="text-align: center; margin: 0 0.4em;">
+                <h1 id="hours">00</h1>
+                <span>Hours</span>
+            </div>
+            <div style="text-align: center; margin: 0 0.4em;">
+                <h1 id="minutes">00</h1>
+                <span>Minutes</span>
+            </div>
+            <div style="text-align: center; margin: 0 0.4em;">
+                <h1 id="seconds">00</h1>
+                <span>Seconds</span>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 0.9em;">
+            <span class="corsive" id="percent">59%</span>
+        </div>
+        <div class="progress-bar" style="text-align: center;">
+            <span class="bar">
+                <span id="progress" class="progress"></span>
+            </span>
+        </div>
+        <div style="max-width: 90%; margin: 50px auto;">
+            <div style="display: flex; align-items: baseline;">
+                <i>&quot; </i>
+                <p class="corsive" id="quote"></p>
+            </div>
+            <div style="text-align: right;">
+                <i class="corsive" id="author"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,67 +1,40 @@
-<!DOCTYPE HTML>
-<html>
-
+<!doctype html>
+<html lang="it" data-theme="dark">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CountDown</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="wikiquote copy.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#131615"><meta name="description" content="Un orologio, un pensiero, il tuo prossimo traguardo. Uno screensaver essenziale, senza distrazioni.">
+<title>Istante | Un momento, per te.</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+<script src="data/phrases.js" defer></script><script src="core.js" defer></script><script src="main.js" defer></script>
 </head>
-
-<body class="bg noselect">
-    <div class="loader-base">
-        <div class="loader"></div>
-    </div>
-
-    <div class="blur">
-        <div style="font-size: 0.5em; display: flex; justify-content: space-between;">
-            <span class="timer" style="letter-spacing: 0.1em;" id="clock">00:00:00</span>
-            <span>
-                <span style="cursor: pointer;" title="set ApiKey" onclick="setApiKey(true)">&#x26BF;</span>
-                <span style="cursor: pointer;" title="Upadate BG e Quotes" onclick="loadQuote(); loadBg()">&#8635;</span>
-                <span style="cursor: pointer;" title="FullScreen" onclick="toggleFullScreen()">&#x26F6;</span>
-            </span>
-        </div>
-        <div class="timer" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-            <div style="text-align: center; margin: 0 0.4em;">
-                <h1 id="days">00</h1>
-                <span>Days</span>
-            </div>
-            <div style="text-align: center; margin: 0 0.4em;">
-                <h1 id="hours">00</h1>
-                <span>Hours</span>
-            </div>
-            <div style="text-align: center; margin: 0 0.4em;">
-                <h1 id="minutes">00</h1>
-                <span>Minutes</span>
-            </div>
-            <div style="text-align: center; margin: 0 0.4em;">
-                <h1 id="seconds">00</h1>
-                <span>Seconds</span>
-            </div>
-        </div>
-        <div style="text-align: center; font-size: 0.9em;">
-            <span class="corsive" id="percent">59%</span>
-        </div>
-        <div class="progress-bar" style="text-align: center;">
-            <span class="bar">
-                <span id="progress" class="progress"></span>
-            </span>
-        </div>
-        <div style="max-width: 90%; margin: 50px auto;">
-            <div style="display: flex; align-items: baseline;">
-                <i>&quot; </i>
-                <p class="corsive" id="quote"></p>
-            </div>
-            <div style="text-align: right;">
-                <i class="corsive" id="author"></i>
-            </div>
-        </div>
-    </div>
-
-    <script src="main.js"></script>
-
-</body>
-
-</html>
+<body>
+<div class="backdrop" aria-hidden="true"><div class="wallpaper" id="wallpaper"></div><div class="ambient"></div><div class="photo-shade"></div></div>
+<div class="app-shell" id="app-shell">
+<header class="topbar chrome"><a class="wordmark" href="index.html" aria-label="Istante, pagina iniziale"><span class="brand-symbol" aria-hidden="true"></span><span>istante<span class="brand-point">.</span></span></a><span class="brand-tagline">Un momento, per te.</span><div class="greeting"><span class="icon" data-icon="moon"></span><span id="greeting">Buonasera</span></div></header>
+<main id="main" class="main-stage">
+<section class="clock-block" aria-label="Orologio e data"><p class="date-label" id="date-label"></p><div class="clock-line" id="clock-line"><time class="clock" id="clock" aria-label="Ora locale">00<span class="clock-colon">:</span>00</time><span class="clock-seconds" id="clock-seconds" hidden>00</span></div></section>
+<section class="thought-block" aria-label="Frase motivazionale"><div class="thought-eyebrow"><span class="tiny-line"></span><h1 id="thought-label">Il pensiero della sera</h1><span class="tiny-line"></span></div><figure class="quote-wrap" id="quote-wrap"><p class="quote-intro" id="quote-intro" hidden></p><blockquote id="quote-text">Un momento, per te.</blockquote></figure><div class="phrase-meta"><span class="status-dot" aria-hidden="true"></span><span id="phrase-meta">Caricamento della raccolta</span><span class="manual-label" id="manual-label" hidden>Scelta da te</span></div></section>
+</main>
+<section class="goal-strip" id="goal-strip" aria-label="Conto alla rovescia"><div class="goal-heading"><span class="section-label" id="goal-label">Il prossimo capitolo</span><h2 id="goal-title">Il tuo traguardo</h2></div><div class="countdown" id="countdown"><div><strong id="goal-days">00</strong><span>giorni</span></div><span class="count-separator">/</span><div><strong id="goal-hours">00</strong><span>ore</span></div><span class="count-separator">/</span><div><strong id="goal-minutes">00</strong><span>minuti</span></div></div><div class="goal-progress"><div class="progress-labels"><span id="progress-label">Il percorso di quest'anno</span><span id="progress-value">0%</span></div><div class="progress-track" id="goal-progress" role="progressbar" aria-label="Avanzamento del traguardo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill"></div></div><p class="goal-date" id="goal-date"></p></div></section>
+<footer class="bottom-bar chrome"><button class="collection-link" type="button" data-open="library"><span class="icon" data-icon="collection"></span><span>La raccolta <span class="count-badge" id="collection-count">700</span></span></button><nav class="toolbar" aria-label="Comandi screensaver"><button class="icon-button" id="next-phrase" type="button" aria-label="Un altro pensiero" title="Un altro pensiero (N)"><span class="icon" data-icon="shuffle"></span></button><button class="icon-button" id="favorite-current" type="button" aria-label="Aggiungi ai preferiti" aria-pressed="false" title="Aggiungi ai preferiti"><span class="icon" data-icon="heart"></span></button><button class="icon-button" id="copy-phrase" type="button" aria-label="Copia la frase" title="Copia la frase"><span class="icon" data-icon="copy"></span></button><span class="toolbar-separator" aria-hidden="true"></span><button class="icon-button" id="fullscreen" type="button" aria-label="Schermo intero" title="Schermo intero (F)"><span class="icon" data-icon="expand"></span></button><button class="icon-button" type="button" data-open="settings" aria-label="Impostazioni" title="Impostazioni (S)"><span class="icon" data-icon="settings"></span></button></nav><button class="mode-link" type="button" data-open="settings"><span class="icon" data-icon="sunrise"></span><span id="mode-label">Mattina &amp; sera</span></button></footer>
+</div>
+<dialog id="settings-dialog" class="panel" aria-labelledby="settings-title">
+<div class="panel-head"><div><p class="section-label">A modo tuo</p><h2 id="settings-title">Il tuo istante.</h2></div><button class="icon-button close-button" data-close type="button" aria-label="Chiudi impostazioni"><span class="icon" data-icon="close"></span></button></div>
+<form id="settings-form" novalidate><div class="panel-content">
+<fieldset><legend>Il ritmo delle frasi</legend><p class="field-note">Scelte casualmente. Il tempo per farle tue.</p><div class="mode-grid">
+<label class="choice-card"><input type="radio" name="mode" value="twice"><span class="icon" data-icon="sunrise"></span><strong>Mattina &amp; sera</strong><small>Due pensieri al giorno</small></label>
+<label class="choice-card"><input type="radio" name="mode" value="daily"><span class="icon" data-icon="sun"></span><strong>Una al giorno</strong><small>Un pensiero, senza fretta</small></label>
+<label class="choice-card"><input type="radio" name="mode" value="interval"><span class="icon" data-icon="clock"></span><strong>A intervalli</strong><small>Un nuovo pensiero ogni tanto</small></label>
+<label class="choice-card"><input type="radio" name="mode" value="opening"><span class="icon" data-icon="shuffle"></span><strong>A ogni apertura</strong><small>Ogni volta una sorpresa</small></label></div>
+<div class="form-row" id="schedule-times"><label>Inizio mattina<input type="time" name="morning" required></label><label id="evening-field">Inizio sera<input type="time" name="evening" required></label></div><div id="interval-field" hidden><label class="stacked-label">Cambia frase ogni<select name="interval"><option value="5">5 minuti</option><option value="15">15 minuti</option><option value="30">30 minuti</option><option value="60">60 minuti</option></select></label></div><p class="field-note schedule-note" id="schedule-note">La frase non cambia ricaricando la pagina. La sera continua anche dopo mezzanotte, fino al mattino.</p></fieldset>
+<fieldset><legend>L'atmosfera</legend><div class="segmented" aria-label="Tema"><label><input type="radio" name="theme" value="dark"><span class="icon" data-icon="moon"></span>Notte</label><label><input type="radio" name="theme" value="light"><span class="icon" data-icon="sun"></span>Carta</label><label><input type="radio" name="theme" value="auto"><span class="icon" data-icon="contrast"></span>Auto</label></div><label class="stacked-label">Sfondo<select name="background"><option value="ambient">Sfumatura delicata</option><option value="plain">Tinta unita</option><option value="photo">Una mia fotografia</option></select></label>
+<div class="photo-fields" id="photo-fields" hidden><label class="file-control"><span class="icon" data-icon="image"></span><span id="photo-label">Scegli una fotografia</span><input type="file" id="photo-input" accept="image/jpeg,image/png,image/webp"></label><label class="stacked-label">Oscuramento della fotografia<input type="range" name="photoDim" min="35" max="85" step="5"></label><p class="field-note">Resta soltanto su questo dispositivo. Con una foto, il testo &egrave; sempre chiaro.</p></div>
+<label class="toggle-row"><span>Mostra l'orologio<small>Disattivalo per lasciare spazio alla frase.</small></span><input type="checkbox" name="showClock" role="switch"></label><label class="toggle-row"><span>Mostra i secondi</span><input type="checkbox" name="showSeconds" role="switch"></label><label class="toggle-row"><span>Movimenti delicati<small>Piccoli spostamenti e transizioni morbide.</small></span><input type="checkbox" name="motion" role="switch"></label></fieldset>
+<fieldset><legend>Il prossimo traguardo</legend><label class="stacked-label">Conto alla rovescia<select name="goalMode"><option value="year">Il nuovo anno</option><option value="custom">Una data importante</option><option value="off">Nascondi</option></select></label><div id="goal-fields" hidden><label class="stacked-label">Nome del traguardo<input type="text" name="goalTitle" maxlength="90" placeholder="Il mio prossimo viaggio"></label><label class="stacked-label">Inizio del percorso<input type="datetime-local" name="goalStart"></label><label class="stacked-label">Data del traguardo<input type="datetime-local" name="goalEnd"></label></div><p class="field-note">Il progresso va dalla data d'inizio a quella del traguardo. Il nuovo anno si aggiorna automaticamente.</p></fieldset>
+<fieldset><legend>Modalit&agrave; screensaver</legend><label class="toggle-row"><span>Nascondi i comandi<small>Dopo 10 secondi di inattivit&agrave;. Muovi il mouse o tocca per ritrovarli.</small></span><input type="checkbox" name="hideControls" role="switch"></label><label class="toggle-row"><span>Mantieni lo schermo acceso<small>Quando supportato dal browser. Si disattiva uscendo dalla pagina.</small></span><input type="checkbox" name="wakeLock" role="switch"></label><p class="field-note" id="wake-support"></p></fieldset>
+<p class="privacy-note"><span class="icon" data-icon="shield"></span><span>Nessun account, nessuna chiave API. Preferenze, raccolta e preferiti restano in questo browser.</span></p><div class="keyboard-note"><kbd>F</kbd> Schermo intero <kbd>N</kbd> Altra frase <kbd>L</kbd> Raccolta <kbd>S</kbd> Impostazioni</div></div>
+<div class="panel-footer"><p id="settings-error" class="form-error" role="alert" hidden></p><button class="text-button" type="button" data-close>Annulla</button><button class="primary-button" type="submit">Salva impostazioni<span class="icon" data-icon="arrow"></span></button></div></form></dialog>
+<dialog id="library-dialog" class="panel library-panel" aria-labelledby="library-title"><div class="panel-head"><div><p class="section-label">Parole da tenere con te</p><h2 id="library-title">La raccolta.</h2><p class="library-subtitle" id="library-subtitle">700 piccoli promemoria.</p></div><button class="icon-button close-button" data-close type="button" aria-label="Chiudi raccolta"><span class="icon" data-icon="close"></span></button></div>
+<div class="library-tools"><label class="search-field"><span class="icon" data-icon="search"></span><input type="search" id="phrase-search" placeholder="Cerca una parola, un pensiero..." aria-label="Cerca nelle frasi" autocomplete="off"></label><div class="library-tabs"><div role="group" aria-label="Filtro raccolta"><button class="tab-button active" id="filter-all" type="button" aria-pressed="true">Tutte <span id="all-count">700</span></button><button class="tab-button" id="filter-favorites" type="button" aria-pressed="false"><span class="icon" data-icon="heart"></span>Preferite <span id="favorites-count">0</span></button></div><span class="result-count" id="result-count" aria-live="polite"></span></div></div><div class="library-list-wrap"><div class="phrase-list" id="phrase-list"></div><p class="empty-state" id="library-empty" hidden>Nessuna frase trovata.</p><button class="secondary-button more-button" type="button" id="load-more">Mostra altre frasi<span class="icon" data-icon="chevron"></span></button></div>
+<div class="library-footer"><label class="text-button file-button"><span class="icon" data-icon="upload"></span>Importa JSON<input type="file" id="import-phrases" accept="application/json,.json"></label><button class="text-button" id="export-phrases" type="button"><span class="icon" data-icon="download"></span>Esporta</button><button class="text-button restore-button" id="restore-phrases" type="button" hidden>Raccolta originale</button><span class="local-note">Solo sul tuo dispositivo</span></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><div class="noscript">Per visualizzare l'orologio e le frasi, abilita JavaScript nel browser.</div></noscript>
+</body></html>
